@@ -1,0 +1,18 @@
+{
+    "private": true,
+    "dependencies": {
+        "@wiptheia/typescript": "latest",
+        "@wiptheia/navigator": "latest",
+        "@wiptheia/terminal": "latest",
+        "@wiptheia/outline-view": "latest",
+        "@wiptheia/preferences": "latest",
+        "@wiptheia/git": "latest",
+        "@wiptheia/file-search": "latest",
+        "@thewiptheiaia/markers": "latest",
+        "@wiptheia/extension-manager": "latest",
+        "@wiptheia/plugin-ext": "latest"
+    },
+    "devDependencies": {
+        "@wiptheia/cli": "latest"
+    }
+}
