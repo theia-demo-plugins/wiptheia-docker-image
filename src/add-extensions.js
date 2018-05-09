@@ -74,6 +74,8 @@ function addExtensions(extensions) {
 
 function replaceToWipTheia(extensionRootPath) {
     cp.execSync(`find ${extensionRootPath} -type f -exec sed -i -e 's/@theia/@wiptheia/g' {} \\;`);
+    cp.execSync(`find ${extensionRootPath} -type f -exec sed -i -e 's/0.3.7/latest/g' {} \\;`);
+    cp.execSync(`find ${extensionRootPath} -type f -name "yarn.lock" -exec rm {} \\;`);
 }
 
 function cloneRepository(path, url) {
