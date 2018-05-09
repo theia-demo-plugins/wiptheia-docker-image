@@ -15,9 +15,11 @@ WORKDIR /home/theia
 # have default Theia build in the workspace in case no plugins are requested
 
 ADD https://raw.githubusercontent.com/theia-ide/theia-apps/master/theia-full-docker/latest.package.json /home/theia/package.json
-RUN sed -i -e 's/@theia/@wiptheia/g' /home/theia/package.json
-
+RUN sed -i -e 's/@theia/@wiptheia/g' /home/theia/package.json && \
+    sed -i '/@wiptheia\/go/d' /home/theia/package.json && \
+    cat /home/theia/package.json
 ADD theia-default-package.json /home/default/theia/package.json
+RUN cat /home/default/theia/package.json
 ADD src/add-extensions.js /home/default
 RUN git clone --depth=1 -b latest-deps git://github.com/eclipse/che-theia-hosted-plugin-manager-extension /tmp/hosted-plugin-extension
 RUN node /home/default/add-extensions.js \
