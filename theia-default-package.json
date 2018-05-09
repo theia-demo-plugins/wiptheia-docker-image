@@ -8,7 +8,7 @@
         "@wiptheia/preferences": "latest",
         "@wiptheia/git": "latest",
         "@wiptheia/file-search": "latest",
-        "@thewiptheiaia/markers": "latest",
+        "@wiptheia/markers": "latest",
         "@wiptheia/extension-manager": "latest",
         "@wiptheia/plugin-ext": "latest"
     },
