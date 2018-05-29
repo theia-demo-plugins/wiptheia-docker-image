@@ -9,6 +9,7 @@
         "@wiptheia/git": "latest",
         "@wiptheia/file-search": "latest",
         "@wiptheia/markers": "latest",
+        "@wiptheia/messages": "latest",
         "@wiptheia/extension-manager": "latest",
         "@wiptheia/plugin-ext": "latest"
     },
