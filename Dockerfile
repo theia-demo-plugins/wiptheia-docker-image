@@ -23,7 +23,7 @@ RUN cat /home/default/theia/package.json
 ADD src/add-extensions.js /home/default
 RUN git clone --depth=1 -b latest-deps git://github.com/eclipse/che-theia-hosted-plugin-manager-extension /tmp/hosted-plugin-extension
 RUN node /home/default/add-extensions.js \
-#    @eclipse-che/che-theia-hosted-plugin-manager-extension:file:///tmp/hosted-plugin-extension \
+    @eclipse-che/che-theia-hosted-plugin-manager-extension:file:///tmp/hosted-plugin-extension \
     che-theia-ssh-extension:https://github.com/eclipse/che-theia-ssh-plugin.git \
     && rm /home/default/add-extensions.js
 RUN cd /home/theia && \
