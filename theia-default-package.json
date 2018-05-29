@@ -11,7 +11,8 @@
         "@wiptheia/markers": "latest",
         "@wiptheia/messages": "latest",
         "@wiptheia/extension-manager": "latest",
-        "@wiptheia/plugin-ext": "latest"
+        "@wiptheia/plugin-ext": "latest",
+        "@wiptheia/plugin-ext-vscode": "latest"
     },
     "devDependencies": {
         "@wiptheia/cli": "latest"
