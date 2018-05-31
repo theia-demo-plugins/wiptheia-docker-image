@@ -41,8 +41,10 @@ RUN git clone https://github.com/eclipse/che-theia-hosted-plugin-manager-extensi
     rm -rf * && \
     cd /home/default/theia && \
     yarn && \
-    yarn theia build && \
-    sudo npm install -g yo @wiptheia/generator-theia-plugin
+    yarn theia build
+# Step to be sure to re-install the generator if there is a change on the repository
+ADD https://api.github.com/repos/theia-demo-plugins/generator-theia-plugin/git/refs/heads/master /tmp/.sha1
+RUN sudo npm install -g yo @wiptheia/generator-theia-plugin
 EXPOSE 3000
 ARG GITHUB_TOKEN
 ENV USE_LOCAL_GIT=true \
